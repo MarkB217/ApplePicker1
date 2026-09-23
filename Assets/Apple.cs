@@ -10,8 +10,14 @@
     {
          if (transform.position.y < bottomY)
         {
-           Destroy(this.gameObject);                                
-         }
+         Destroy(this.gameObject);
+
+            //Get a reference to the ApplePicker component of Main Camera
+            ApplePicker apScript = Camera.main.GetComponent<ApplePicker>();
+            //Call the public AppleDestroyed() method of apScript
+            apScript.AppleMissed();
+
+        }
     }
 
  }
