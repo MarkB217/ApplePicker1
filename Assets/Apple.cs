@@ -16,7 +16,6 @@
             ApplePicker apScript = Camera.main.GetComponent<ApplePicker>();
             //Call the public AppleDestroyed() method of apScript
             apScript.AppleMissed();
-
         }
     }
 

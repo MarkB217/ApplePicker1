@@ -7,11 +7,11 @@ public class Basket : MonoBehaviour
 {
     public ScoreCounter scoreCounter;
 
-    private void Start()
+    void Start()
     {
-      //Find a reference to ScoreCounter GameObject
-      GameObject scoreGO = GameObject.Find("ScoreCounter");
-        // Get the Text Component of that GameObject
+        //Find a GameObject named ScoreCounter in Scene Hierarchy
+        GameObject scoreGO = GameObject.Find("ScoreCounter");
+        // Get the Scorecounter (Script) component of scoreGO
         scoreCounter = scoreGO.GetComponent<ScoreCounter>();
 
     }
@@ -38,11 +38,10 @@ public class Basket : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {                            
         // Find out what hit this basket
-    GameObject collidedWith = collision.gameObject;                     
+        GameObject collidedWith = collision.gameObject;                     
         if (collidedWith.tag == "Apple")
         {                         
             Destroy(collidedWith);
-
             //Increase the score
             scoreCounter.score += 100;
             HighScore.TRY_SET_HIGH_SCORE(scoreCounter.score);

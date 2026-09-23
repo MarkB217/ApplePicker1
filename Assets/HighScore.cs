@@ -13,6 +13,16 @@ public class HighScore : MonoBehaviour
     private void Awake()
     {
         _UI_TEXT = GetComponent<Text>();
+
+        //If the PlayerPrefs HighScore already exists, read it
+        if (PlayerPrefs.HasKey("HighScore"))
+        {
+            SCORE = PlayerPrefs.GetInt("HighScore");
+        }
+
+        //Assign the high score to HighScore
+        PlayerPrefs.SetInt("HighScore", SCORE);
+
     }
 
     static public int SCORE
@@ -21,6 +31,7 @@ public class HighScore : MonoBehaviour
         private set
         {
             _SCORE = value;
+            PlayerPrefs.SetInt("HighScore", value);
             if (_UI_TEXT != null)
             {
                 _UI_TEXT.text = "High Score: " + value.ToString("#,0");
