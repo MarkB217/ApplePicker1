@@ -442,9 +442,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -2495347483444076412, guid: d7e09ab58e8388f42866ec2378208782, type: 3}
+      propertyPath: applePrefab
+      value: 
+      objectReference: {fileID: 1149562428103385590, guid: 8e9f5db863b552646a6d1a03b0f9301d, type: 3}
     - target: {fileID: 841342523997286939, guid: d7e09ab58e8388f42866ec2378208782, type: 3}
       propertyPath: m_Name
       value: appleTree
+      objectReference: {fileID: 0}
+    - target: {fileID: 4236450679704060186, guid: d7e09ab58e8388f42866ec2378208782, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8844250930776945483, guid: d7e09ab58e8388f42866ec2378208782, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8844250930776945483, guid: d7e09ab58e8388f42866ec2378208782, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8844250930776945483, guid: d7e09ab58e8388f42866ec2378208782, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8844250930776945483, guid: d7e09ab58e8388f42866ec2378208782, type: 3}
       propertyPath: m_LocalPosition.x
